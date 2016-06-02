@@ -1,6 +1,8 @@
 /* Use this old export style until sequelize cli supports es6 syntax */
 const DB_TYPES = require('./constants').DB_TYPES;
 
+require('dotenv').config();
+
 /*
  * Set DB_TYPE to a database of your choice:
  * - MONGO: MongoDB

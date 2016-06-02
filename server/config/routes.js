@@ -52,4 +52,12 @@ export default (app) => {
   } else {
     console.warn(unsupportedMessage('topics routes'));
   }
+
+  app.use('/s3', require('react-s3-uploader/s3router')({
+    bucket: 'repup-development',
+    region: 'us-east-1', // optional
+    signatureVersion: 'v4', // optional (use for some amazon regions: frankfurt and others)
+    headers: {'Access-Control-Allow-Origin': '*'}, // optional
+    ACL: 'private' // this is default
+  }));
 };
