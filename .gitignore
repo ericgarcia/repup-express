@@ -4,3 +4,6 @@ dist
 *.log
 coverage
 .idea
+compiled
+public
+.env
